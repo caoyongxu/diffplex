@@ -31,6 +31,7 @@ namespace DiffPlex.ConsoleRunner
 
                 Console.WriteLine(line.Text);
             }
+            Console.ReadKey();
         }
 
         private const string OldText =

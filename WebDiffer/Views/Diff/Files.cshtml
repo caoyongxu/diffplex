@@ -1,0 +1,37 @@
+﻿<div id="header">
+    <h1>
+        DiffPlex Web
+    </h1>
+</div>
+<h2>Create a diff</h2>
+
+@using (Html.BeginForm("DiffFiles", "Diff", new object { }, FormMethod.Post, null, null))
+{
+    <table>
+        <tr>
+            <td>
+                <label for="oldText">
+                    First file (Git repository branch):
+                </label>
+            </td>
+            <td>
+                @Html.TextBox("oldText", @"C:\Users\v-ycou\Downloads\INF999x_1207 (1)\INF999x_1207\Modules\Course Metadata.md", new { size = "80"})
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="newText">
+                    Second  file (Git repository branch):
+                </label>
+            </td>
+            <td>
+                @Html.TextBox("newText", @"C:\Users\v-ycou\Downloads\INF999x_1207 (2)\INF999x_1207\Modules\Course Metadata.md", new { size = "80" })
+            </td>
+        </tr>
+    </table>
+
+    <div class="clear"></div>
+    <div class="formField">
+        <input type="submit" name="diff" value="Show Diff" />
+    </div>
+}
